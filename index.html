@@ -1,0 +1,138 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>National Parks Wildlife | Australia</title>
+
+    <!-- Vega and Vega-Lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@6.4.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.5.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.3.0"></script>
+
+    <!-- Excel and CSV file reader -->
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">AUSTRALIA · BIODIVERSITY</p>
+            <h1>National Parks Wildlife</h1>
+            <p class="subtitle">
+                Exploring protected areas and environmental risks
+                that matter for Australian wildlife.
+            </p>
+        </div>
+    </header>
+
+    <main>
+        <section class="introduction">
+            <h2>Understanding Australia's protected areas</h2>
+            <p>
+                This draft explores protected-area records and exotic
+                environmental pest risks using two datasets. The charts
+                provide an initial view of protected-area size and
+                environmental risk categories.
+            </p>
+            <p class="note">
+                <strong>Data note:</strong> The CAPAD file supplied here
+                contains regional names, hectares and shape measurements,
+                but no state or territory field. Therefore, the first
+                chart ranks records by hectares instead of comparing
+                them by state.
+            </p>
+        </section>
+
+        <section class="chart-section">
+            <div class="section-heading">
+                <span class="chart-number">01</span>
+                <div>
+                    <h2>Largest protected-area records</h2>
+                    <p>
+                        Compare the 15 records with the largest reported
+                        area, measured in hectares.
+                    </p>
+                </div>
+            </div>
+            <div id="chart1" class="chart"></div>
+        </section>
+
+        <section class="chart-section">
+            <div class="section-heading">
+                <span class="chart-number">02</span>
+                <div>
+                    <h2>Area and shape measurements</h2>
+                    <p>
+                        Explore the relationship between reported hectares
+                        and shape area. Both axes use a logarithmic scale.
+                    </p>
+                </div>
+            </div>
+            <div id="chart2" class="chart"></div>
+        </section>
+
+        <section class="chart-section">
+            <div class="section-heading">
+                <span class="chart-number">03</span>
+                <div>
+                    <h2>Exotic environmental pest risk profile</h2>
+                    <p>
+                        Compare entry, establishment and spread likelihood
+                        across the pest records.
+                    </p>
+                </div>
+            </div>
+            <div id="chart3" class="chart"></div>
+        </section>
+
+        <section class="chart-section">
+            <div class="section-heading">
+                <span class="chart-number">04</span>
+                <div>
+                    <h2>Environmental impact categories</h2>
+                    <p>
+                        Count pest records according to their recorded
+                        environmental impact category.
+                    </p>
+                </div>
+            </div>
+            <div id="chart4" class="chart"></div>
+        </section>
+
+        <section class="limitations">
+            <h2>Interpreting the data</h2>
+            <ul>
+                <li>
+                    Protected-area size does not directly measure
+                    wildlife abundance or species diversity.
+                </li>
+                <li>
+                    The pest dataset does not identify specific parks,
+                    so it should not be used to claim that a pest is
+                    present in a particular protected area.
+                </li>
+                <li>
+                    Check the dataset documentation to confirm the
+                    geographic meaning and units of each CAPAD field.
+                </li>
+            </ul>
+        </section>
+
+        <p id="status" class="status" role="status">
+            Loading datasets and charts...
+        </p>
+    </main>
+
+    <footer>
+        <p>National Parks Wildlife · Data visualisation draft</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
+```

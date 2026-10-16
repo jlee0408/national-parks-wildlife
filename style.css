@@ -1,0 +1,186 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #26352c;
+    background: #f3f6f1;
+    line-height: 1.6;
+}
+
+/* Header */
+.hero {
+    background: #244d38;
+    color: white;
+    padding: 55px 24px;
+}
+
+.hero-content {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #c5dfc9;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    line-height: 1.15;
+}
+
+.subtitle {
+    max-width: 650px;
+    margin: 16px 0 0;
+    font-size: 1.1rem;
+    color: #e2eee4;
+}
+
+/* Main content */
+main {
+    width: min(1120px, 100%);
+    margin: 32px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 26px;
+    padding: 26px;
+    background: #ffffff;
+    border: 1px solid #e1e8df;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(32, 60, 42, 0.04);
+}
+
+h2 {
+    margin: 0 0 12px;
+    color: #244d38;
+    font-size: 1.45rem;
+    line-height: 1.35;
+}
+
+p {
+    margin-top: 0;
+}
+
+.introduction p:last-child {
+    margin-bottom: 0;
+}
+
+.note {
+    margin-top: 18px;
+    padding: 14px 16px;
+    background: #edf4ed;
+    border-left: 4px solid #47785b;
+    border-radius: 4px;
+    font-size: 0.94rem;
+}
+
+/* Chart headings */
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin-bottom: 6px;
+}
+
+.section-heading p {
+    margin-bottom: 0;
+    color: #617064;
+}
+
+.chart-number {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 9px;
+    background: #e5efe5;
+    color: #244d38;
+    font-weight: bold;
+}
+
+.chart {
+    width: 100%;
+    min-height: 200px;
+    overflow-x: auto;
+}
+
+.chart .vega-embed {
+    width: 100%;
+}
+
+/* Limitations */
+.limitations ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.limitations li {
+    margin-bottom: 10px;
+}
+
+.limitations li:last-child {
+    margin-bottom: 0;
+}
+
+/* Loading and error message */
+.status {
+    padding: 12px 4px;
+    color: #526457;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    padding: 24px 20px;
+    text-align: center;
+    background: #e5ece4;
+    color: #536356;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .hero {
+        padding: 38px 20px;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 18px 14px;
+        border-radius: 9px;
+    }
+
+    .section-heading {
+        gap: 10px;
+    }
+
+    .chart-number {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+    }
+}
